@@ -1,29 +1,18 @@
-import './ExpenceItems.css';
+import "./ExpenceItems.css";
 
-function ExpenceItems(){
-    return (
-       <div>
-        <div>
-            October 22th 2022
+function ExpenceItems(props) {
+  return (
+    <>
+      <div className="expense-item">
+        <div>{props.date.toISOString()}</div>
+        
+        <div className="expense-item__description">
+          <h2>{props.title}</h2>
+          <div>{props.locationOfExpenditure}</div>
+          <div className="expense-item__price">${props.amount}</div>
         </div>
-        <div>
-            <h2>Car Insurance</h2>
-            <div>$265</div>
-        </div>
-        <div>
-            <h2>Food</h2>
-            <div>$10</div>
-        </div>
-        <div>
-            <h2>Petrol</h2>
-            <div>$100</div>
-        </div>
-        <div>
-            <h2>Movies</h2>
-            <div>$200</div>
-        </div>
-       </div>
-   
-    )
+      </div>
+    </>
+  );
 }
 export default ExpenceItems;
