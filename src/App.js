@@ -32,9 +32,17 @@ const App=()=> {
           locationOfExpenditure: "grugram",
         },
       ];
+
+      const expenceHandler=expense=>{
+        console.log('in app.js')
+        console.log(expense)
+      }
+
+
+
     return (
         <>
-           <NewExpense />
+           <NewExpense onAddExpense={expenceHandler} />
            <Expense items={expenses}/>
         </>
     );
